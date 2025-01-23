@@ -97,7 +97,14 @@ redis-cli
    ```bash
    DECR counter
    ```
-
+6. **Spécifier une durée de vie d'une clé :** :
+   ```bash
+   expire macle 120
+   ```
+7. **Afficher la durée de vie d'une clé :** :
+   ```bash
+   ttl macle
+   ```
 ---
 
 ## Travailler avec les Listes
