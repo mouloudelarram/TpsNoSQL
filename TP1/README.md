@@ -124,7 +124,12 @@ Les listes Redis permettent de stocker des collections ordonnées de chaînes de
    LRANGE mylist 0 -1
    ```
    (Cela récupère tous les éléments.)
-3. **Extraire des éléments d'une liste** :
+2Bis. **Récupérer des éléments d'une liste** :
+   ```bash
+   LRANGE mylist 0 0
+   ```
+   (Cela récupère le 1er élément.)
+4. **Extraire des éléments d'une liste** :
    - Extraire à gauche :
      ```bash
      LPOP mylist
