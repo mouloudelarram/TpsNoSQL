@@ -13,6 +13,17 @@ Ce README fournit une vue d'ensemble de l'utilisation de Redis, une base de donn
 6. [Travailler avec les Ensembles](#travailler-avec-les-ensembles)
 7. [Persistance des Données](#persistance-des-données)
 8. [Apprentissage Supplémentaire](#apprentissage-supplémentaire)
+9. [Introduction aux Ensembles Ordonnés](#introduction-aux-ensembles-ordonnés)
+10. [Commandes de Base pour les Ensembles Ordonnés](#commandes-de-base-pour-les-ensembles-ordonnés)
+11. [Importance de la Persistance et des Performances](#importance-de-la-persistance-et-des-performances)
+12. [Introduction aux Haches (Hashes)](#introduction-aux-haches-hashes)
+13. [Command de Base pour les Haches](#commandes-de-base-pour-les-haches)
+14. [Utilisation des Pub/Sub pour les Applications en Temps Réel](#utilisation-des-pubsub-pour-les-applications-en-temps-réel)
+15. [Command de Base pour Pub/Sub](#commandes-de-base-pour-pubsub)
+16. [Gestion des Bases de Données](#gestion-des-bases-de-données)
+17. [Commandes de Base pour la Gestion des Bases de Données](#commandes-de-base-pour-la-gestion-des-bases-de-données)
+18. [Conclusion](#conclusion)
+
 
 ---
 
@@ -205,11 +216,11 @@ Redis offre une documentation extensive sur son site officiel. Vous pouvez explo
 
 ---
 
-#### Introduction aux Ensembles Ordonnés
+## Introduction aux Ensembles Ordonnés
 
 Les ensembles ordonnés (zsets) sont une structure de données utilisée pour classer des scores, par exemple pour des systèmes de recommandation. Contrairement aux ensembles simples (sets), les ensembles ordonnés permettent de stocker des valeurs avec un score associé.
 
-#### Commandes de Base pour les Ensembles Ordonnés
+## Commandes de Base pour les Ensembles Ordonnés
 
 1. **Définir des valeurs avec un score** :
    ```bash
@@ -239,15 +250,15 @@ Les ensembles ordonnés (zsets) sont une structure de données utilisée pour cl
    ZRANK score "Augustin"
    ```
 
-#### Importance de la Persistance et des Performances
+## Importance de la Persistance et des Performances
 
 Il est crucial de comprendre que les opérations de lecture/écriture sur disque sont beaucoup plus lentes que celles en mémoire RAM. Redis, en tant que base de données en mémoire, minimise ces accès disque, ce qui améliore considérablement les performances.
 
-#### Introduction aux Haches (Hashes)
+## Introduction aux Haches (Hashes)
 
 Les haches permettent de stocker des paires clé-valeur où chaque clé peut avoir plusieurs champs. C'est utile pour distribuer des données sur plusieurs serveurs.
 
-#### Commandes de Base pour les Haches
+## Commandes de Base pour les Haches
 
 1. **Définir une hache** :
    ```bash
@@ -271,11 +282,11 @@ Les haches permettent de stocker des paires clé-valeur où chaque clé peut avo
    HINCRBY user:2 age 4
    ```
 
-#### Utilisation des Pub/Sub pour les Applications en Temps Réel
+## Utilisation des Pub/Sub pour les Applications en Temps Réel
 
 Les pub/sub (publication/souscription) sont utilisés pour les applications en temps réel, comme les notifications et les messages.
 
-#### Commandes de Base pour Pub/Sub
+## Commandes de Base pour Pub/Sub
 
 1. **Souscrire à un canal** :
    ```bash
@@ -292,11 +303,11 @@ Les pub/sub (publication/souscription) sont utilisés pour les applications en t
    PSUBSCRIBE my*
    ```
 
-#### Gestion des Bases de Données
+## Gestion des Bases de Données
 
 Redis permet de gérer plusieurs bases de données. Par défaut, il y a 16 bases de données disponibles.
 
-#### Commandes de Base pour la Gestion des Bases de Données
+## Commandes de Base pour la Gestion des Bases de Données
 
 1. **Changer de base de données** :
    ```bash
@@ -308,6 +319,6 @@ Redis permet de gérer plusieurs bases de données. Par défaut, il y a 16 bases
    KEYS *
    ```
 
-#### Conclusion
+## Conclusion
 
 Redis est un outil puissant pour les applications nécessitant des performances élevées. Il offre une grande flexibilité avec ses différentes structures de données et ses commandes de base. Pour plus d'informations, consultez la [documentation officielle de Redis](https://redis.io/docs).
