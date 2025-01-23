@@ -193,4 +193,109 @@ Redis offre une documentation extensive sur son site officiel. Vous pouvez explo
 
 ---
 
-Redis est un outil puissant qui peut améliorer les performances de vos applications. Ce guide ne couvre que les bases—explorez ses capacités complètes sur le [site web de Redis](https://redis.io/).
+#### Introduction aux Ensembles Ordonnés
+
+Les ensembles ordonnés (zsets) sont une structure de données utilisée pour classer des scores, par exemple pour des systèmes de recommandation. Contrairement aux ensembles simples (sets), les ensembles ordonnés permettent de stocker des valeurs avec un score associé.
+
+#### Commandes de Base pour les Ensembles Ordonnés
+
+1. **Définir des valeurs avec un score** :
+   ```bash
+   ZADD score "Augustin" 19
+   ZADD score "Inès" 18
+   ```
+
+2. **Récupérer les éléments** :
+   ```bash
+   ZRANGE score 0 -1
+   ```
+   Cette commande renvoie tous les éléments par ordre croissant de score.
+
+3. **Récupérer les éléments dans un intervalle spécifique** :
+   ```bash
+   ZRANGE score 0 1
+   ```
+   Cette commande renvoie les deux premiers éléments par ordre croissant.
+
+4. **Récupérer les éléments par ordre décroissant** :
+   ```bash
+   ZREVRANGE score 0 -1
+   ```
+
+5. **Connaître la position d'un élément** :
+   ```bash
+   ZRANK score "Augustin"
+   ```
+
+#### Importance de la Persistance et des Performances
+
+Il est crucial de comprendre que les opérations de lecture/écriture sur disque sont beaucoup plus lentes que celles en mémoire RAM. Redis, en tant que base de données en mémoire, minimise ces accès disque, ce qui améliore considérablement les performances.
+
+#### Introduction aux Haches (Hashes)
+
+Les haches permettent de stocker des paires clé-valeur où chaque clé peut avoir plusieurs champs. C'est utile pour distribuer des données sur plusieurs serveurs.
+
+#### Commandes de Base pour les Haches
+
+1. **Définir une hache** :
+   ```bash
+   HSET user:1 username "Mouloud"
+   HSET user:1 age 31
+   HSET user:1 email "mouloud@mail.fr"
+   ```
+
+2. **Récupérer toutes les valeurs d'une hache** :
+   ```bash
+   HGETALL user:1
+   ```
+
+3. **Définir plusieurs champs en une seule commande** :
+   ```bash
+   HMSET user:2 username "Augustin" age 5 email "augustin@gmail.fr"
+   ```
+
+4. **Incrémenter une valeur dans une hache** :
+   ```bash
+   HINCRBY user:2 age 4
+   ```
+
+#### Utilisation des Pub/Sub pour les Applications en Temps Réel
+
+Les pub/sub (publication/souscription) sont utilisés pour les applications en temps réel, comme les notifications et les messages.
+
+#### Commandes de Base pour Pub/Sub
+
+1. **Souscrire à un canal** :
+   ```bash
+   SUBSCRIBE mychannel
+   ```
+
+2. **Publier un message sur un canal** :
+   ```bash
+   PUBLISH mychannel "Nouveau cours sur MongoDB"
+   ```
+
+3. **Souscrire à plusieurs canaux** :
+   ```bash
+   PSUBSCRIBE my*
+   ```
+
+#### Gestion des Bases de Données
+
+Redis permet de gérer plusieurs bases de données. Par défaut, il y a 16 bases de données disponibles.
+
+#### Commandes de Base pour la Gestion des Bases de Données
+
+1. **Changer de base de données** :
+   ```bash
+   SELECT 1
+   ```
+
+2. **Lister toutes les clés d'une base de données** :
+   ```bash
+   KEYS *
+   ```
+
+#### Conclusion
+
+Redis est un outil puissant pour les applications nécessitant des performances élevées. Il offre une grande flexibilité avec ses différentes structures de données et ses commandes de base. Pour plus d'informations, consultez la [documentation officielle de Redis](https://redis.io/docs).
