@@ -1,5 +1,4 @@
 # TpsNoSQL
-TpsNoSQL
 
 # par EL ARRAM Mouloud
 
