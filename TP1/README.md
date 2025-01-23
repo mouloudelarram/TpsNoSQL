@@ -30,10 +30,10 @@ Ce README fournit une vue d'ensemble de l'utilisation de Redis, une base de donn
 
 ## Qu'est-ce que Redis?
    Redis est un système de gestion de bases de données NoSQL orienté clé-valeur, connu pour sa rapidité et sa flexibilité. Avant de plonger dans l'installation et l'utilisation de Redis, il est important de comprendre les quatre principales familles de systèmes de gestion de bases de données NoSQL :
-#### Orientées graphes : Utilisées pour traiter les réseaux massifs, comme les recommandations sur Twitter2.
-#### Orientées colonnes : Facilitent les traitements privilégiant les colonnes, par exemple pour calculer l'âge moyen des utilisateurs2.
-#### Orientées clé-valeur : Offrent une efficacité en lecture/écriture et un bon changement d'échelle, comme pour les systèmes de sauvegarde type Dropbox2.
-#### Orientées document : Supportent des structures variables, idéales pour la gestion des métadonnées de produits sur des plateformes comme eBay2.
+1. Orientées graphes : Utilisées pour traiter les réseaux massifs, comme les recommandations sur Twitter2.
+2. Orientées colonnes : Facilitent les traitements privilégiant les colonnes, par exemple pour calculer l'âge moyen des utilisateurs2.
+3. Orientées clé-valeur : Offrent une efficacité en lecture/écriture et un bon changement d'échelle, comme pour les systèmes de sauvegarde type Dropbox2.
+4. Orientées document : Supportent des structures variables, idéales pour la gestion des métadonnées de produits sur des plateformes comme eBay2.
 Redis appartient à la famille des bases de données orientées clé-valeur. Voici comment l'installer et l'utiliser :
 
 ---
@@ -82,14 +82,14 @@ PONG
 ---
 ## Fonctionnalités clés de Redis
 #### Redis offre plusieurs fonctionnalités importantes :
-##### Modèle d'exécution mono-thread : Redis utilise principalement un modèle mono-thread pour traiter les requêtes, ce qui offre simplicité, prévisibilité et performance3.
-##### Pipeline de commandes : Redis permet d'envoyer plusieurs commandes en une seule requête, réduisant ainsi la latence réseau3.
-##### Transactions : Redis supporte les transactions, permettant l'exécution atomique d'un groupe de commandes3.
-##### Pub/Sub (Publication/Abonnement) : Redis intègre un système de messagerie permettant aux clients de s'abonner à des canaux et de recevoir des messages publiés3.
-##### Réplication : Redis prend en charge la réplication maître-esclave, améliorant la disponibilité des données et permettant de répartir la charge de lecture3.
-##### Cluster Redis : Introduit dans Redis 3.0, le cluster permet une meilleure gestion des défaillances et une haute disponibilité7.
-##### Compression de chaînes : Redis utilise une technique de compression pour réduire l'utilisation de la mémoire pour les petites chaînes de caractères3.
-##### Structures de données avancées : En plus des simples paires clé-valeur, Redis supporte des structures de données plus complexes comme les listes, les ensembles, et les hashes.
+1. Modèle d'exécution mono-thread : Redis utilise principalement un modèle mono-thread pour traiter les requêtes, ce qui offre simplicité, prévisibilité et performance3.
+2. Pipeline de commandes : Redis permet d'envoyer plusieurs commandes en une seule requête, réduisant ainsi la latence réseau3.
+3. Transactions : Redis supporte les transactions, permettant l'exécution atomique d'un groupe de commandes3.
+4. Pub/Sub (Publication/Abonnement) : Redis intègre un système de messagerie permettant aux clients de s'abonner à des canaux et de recevoir des messages publiés3.
+5. Réplication : Redis prend en charge la réplication maître-esclave, améliorant la disponibilité des données et permettant de répartir la charge de lecture3.
+6. Cluster Redis : Introduit dans Redis 3.0, le cluster permet une meilleure gestion des défaillances et une haute disponibilité7.
+7. Compression de chaînes : Redis utilise une technique de compression pour réduire l'utilisation de la mémoire pour les petites chaînes de caractères3.
+8. Structures de données avancées : En plus des simples paires clé-valeur, Redis supporte des structures de données plus complexes comme les listes, les ensembles, et les hashes.
 Redis se distingue par sa rapidité, sa flexibilité et sa capacité à fonctionner comme une base de données en mémoire avec persistance optionnelle. Ces caractéristiques en font un choix populaire pour les caches, les files d'attente de messages, et les applications nécessitant des performances élevées en lecture/écriture.
 
 ---
