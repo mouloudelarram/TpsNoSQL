@@ -34,6 +34,7 @@ Ce README fournit une vue d'ensemble de l'utilisation de Redis, une base de donn
 2. Orientées colonnes : Facilitent les traitements privilégiant les colonnes, par exemple pour calculer l'âge moyen des utilisateurs2.
 3. Orientées clé-valeur : Offrent une efficacité en lecture/écriture et un bon changement d'échelle, comme pour les systèmes de sauvegarde type Dropbox2.
 4. Orientées document : Supportent des structures variables, idéales pour la gestion des métadonnées de produits sur des plateformes comme eBay2.
+
 Redis appartient à la famille des bases de données orientées clé-valeur. Voici comment l'installer et l'utiliser :
 
 ---
@@ -90,6 +91,7 @@ PONG
 6. Cluster Redis : Introduit dans Redis 3.0, le cluster permet une meilleure gestion des défaillances et une haute disponibilité7.
 7. Compression de chaînes : Redis utilise une technique de compression pour réduire l'utilisation de la mémoire pour les petites chaînes de caractères3.
 8. Structures de données avancées : En plus des simples paires clé-valeur, Redis supporte des structures de données plus complexes comme les listes, les ensembles, et les hashes.
+
 Redis se distingue par sa rapidité, sa flexibilité et sa capacité à fonctionner comme une base de données en mémoire avec persistance optionnelle. Ces caractéristiques en font un choix populaire pour les caches, les files d'attente de messages, et les applications nécessitant des performances élevées en lecture/écriture.
 
 ---
