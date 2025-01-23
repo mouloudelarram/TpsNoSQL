@@ -252,7 +252,7 @@ Les haches permettent de stocker des paires clé-valeur où chaque clé peut avo
 1. **Définir une hache** :
    ```bash
    HSET user:1 username "Mouloud"
-   HSET user:1 age 31
+   HSET user:1 age 22
    HSET user:1 email "mouloud@mail.fr"
    ```
 
