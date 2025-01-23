@@ -82,14 +82,14 @@ PONG
 ---
 ## Fonctionnalités clés de Redis
 #### Redis offre plusieurs fonctionnalités importantes :
-###### Modèle d'exécution mono-thread : Redis utilise principalement un modèle mono-thread pour traiter les requêtes, ce qui offre simplicité, prévisibilité et performance3.
-###### Pipeline de commandes : Redis permet d'envoyer plusieurs commandes en une seule requête, réduisant ainsi la latence réseau3.
-###### Transactions : Redis supporte les transactions, permettant l'exécution atomique d'un groupe de commandes3.
-###### Pub/Sub (Publication/Abonnement) : Redis intègre un système de messagerie permettant aux clients de s'abonner à des canaux et de recevoir des messages publiés3.
-###### Réplication : Redis prend en charge la réplication maître-esclave, améliorant la disponibilité des données et permettant de répartir la charge de lecture3.
-###### Cluster Redis : Introduit dans Redis 3.0, le cluster permet une meilleure gestion des défaillances et une haute disponibilité7.
-###### Compression de chaînes : Redis utilise une technique de compression pour réduire l'utilisation de la mémoire pour les petites chaînes de caractères3.
-###### Structures de données avancées : En plus des simples paires clé-valeur, Redis supporte des structures de données plus complexes comme les listes, les ensembles, et les hashes.
+##### Modèle d'exécution mono-thread : Redis utilise principalement un modèle mono-thread pour traiter les requêtes, ce qui offre simplicité, prévisibilité et performance3.
+##### Pipeline de commandes : Redis permet d'envoyer plusieurs commandes en une seule requête, réduisant ainsi la latence réseau3.
+##### Transactions : Redis supporte les transactions, permettant l'exécution atomique d'un groupe de commandes3.
+##### Pub/Sub (Publication/Abonnement) : Redis intègre un système de messagerie permettant aux clients de s'abonner à des canaux et de recevoir des messages publiés3.
+##### Réplication : Redis prend en charge la réplication maître-esclave, améliorant la disponibilité des données et permettant de répartir la charge de lecture3.
+##### Cluster Redis : Introduit dans Redis 3.0, le cluster permet une meilleure gestion des défaillances et une haute disponibilité7.
+##### Compression de chaînes : Redis utilise une technique de compression pour réduire l'utilisation de la mémoire pour les petites chaînes de caractères3.
+##### Structures de données avancées : En plus des simples paires clé-valeur, Redis supporte des structures de données plus complexes comme les listes, les ensembles, et les hashes.
 Redis se distingue par sa rapidité, sa flexibilité et sa capacité à fonctionner comme une base de données en mémoire avec persistance optionnelle. Ces caractéristiques en font un choix populaire pour les caches, les files d'attente de messages, et les applications nécessitant des performances élevées en lecture/écriture.
 
 ---
