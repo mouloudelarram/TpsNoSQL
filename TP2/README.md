@@ -12,6 +12,8 @@ Ce guide explique comment installer et exécuter MongoDB sur **Windows**, **macO
 - [Exécution de MongoDB](#exécution-de-mongodb)
 - [Vérification de l'installation](#vérification-de-linstallation)
 - [Dépannage](#dépannage)
+- [Conclusion](#conclusion)
+- [TP MongoDB - Gestion d'une Base de Films](#tp-mongodb---gestion-dune-base-de-films)
 
 ---
 
