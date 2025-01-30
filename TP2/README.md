@@ -219,7 +219,7 @@ Ce TP permet de se familiariser avec MongoDB en manipulant une collection de fil
 
 1. Importez la collection de films avec la commande :
 ```bash
-./mongoimport --db lesfilms --collection films films.json --jsonArray
+mongoimport --db lesfilms --collection films films.json --jsonArray
 ```
 
 ## Requêtes MongoDB
