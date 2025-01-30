@@ -61,42 +61,42 @@ Ce TP permet de se familiariser avec MongoDB en manipulant une collection de fil
 ### 1. Vérification de l'Import
 Pour vérifier que les données ont été importées correctement :
 ```javascript
-db.films.count()
+db.Film.count()
 ```
 
 ### 2. Structure des Documents
 Pour comprendre la structure d'un document :
 ```javascript
-db.films.findOne()
+db.Film.findOne()
 ```
 
 ### 3. Films d'Action
 Pour afficher la liste des films d'action :
 ```javascript
-db.films.find({"genre": "Action"})
+db.Film.find({"genre": "Action"})
 ```
 
 ### 4. Nombre de Films d'Action
 Pour compter le nombre de films d'action :
 ```javascript
-db.films.count({"genre": "Action"})
+db.Film.count({"genre": "Action"})
 ```
 
 ### 5. Films d'Action Français
 Pour trouver les films d'action produits en France :
 ```javascript
-db.films.find({"genre": "Action", "pays": "France"})
+db.Film.find({"genre": "Action", "pays": "France"})
 ```
 
 ### 6. Films d'Action Français de 1963
 ```javascript
-db.films.find({"genre": "Action", "pays": "France", "annee": 1963})
+db.Film.find({"genre": "Action", "pays": "France", "annee": 1963})
 ```
 
 ### 7. Filtrage des Attributs
 Pour n'afficher que certains attributs des films d'action français :
 ```javascript
-db.films.find(
+db.Film.find(
     {"genre": "Action", "pays": "France"},
     {"titre": 1, "annee": 1}
 )
@@ -105,7 +105,7 @@ db.films.find(
 ### 8. Masquer les Identifiants
 Pour masquer les identifiants des documents :
 ```javascript
-db.films.find(
+db.Film.find(
     {"genre": "Action", "pays": "France"},
     {"_id": 0, "titre": 1, "annee": 1}
 )
@@ -113,7 +113,7 @@ db.films.find(
 
 ### 9. Titres et Grades sans ID
 ```javascript
-db.films.find(
+db.Film.find(
     {"genre": "Action", "pays": "France"},
     {"_id": 0, "titre": 1, "grades": 1}
 )
@@ -122,7 +122,7 @@ db.films.find(
 ### 10. Filtrage par Note
 Pour les films avec une note supérieure à 10 :
 ```javascript
-db.films.find(
+db.Film.find(
     {"genre": "Action", "pays": "France", "grades": {$gt: 10}},
     {"_id": 0, "titre": 1, "grades": 1}
 )
@@ -130,7 +130,7 @@ db.films.find(
 
 ### 11. Films avec Uniquement des Notes Supérieures à 10
 ```javascript
-db.films.find(
+db.Film.find(
     {"genre": "Action", "pays": "France", "grades": {$not: {$lte: 10}}},
     {"_id": 0, "titre": 1, "grades": 1}
 )
@@ -139,18 +139,18 @@ db.films.find(
 ### 12. Genres Uniques
 Pour afficher tous les genres distincts :
 ```javascript
-db.films.distinct("genre")
+db.Film.distinct("genre")
 ```
 
 ### 13. Grades Uniques
 ```javascript
-db.films.distinct("grades")
+db.Film.distinct("grades")
 ```
 
 ### 14. Recherche par Artistes
 Pour trouver les films avec certains artistes :
 ```javascript
-db.films.find({
+db.Film.find({
     "artistes": {
         $in: ["artist:4", "artist:18", "artist:11"]
     }
@@ -159,12 +159,12 @@ db.films.find({
 
 ### 15. Films sans Résumé
 ```javascript
-db.films.find({"resume": {$exists: false}})
+db.Film.find({"resume": {$exists: false}})
 ```
 
 ### 16. Films avec Leonardo DiCaprio en 1997
 ```javascript
-db.films.find({
+db.Film.find({
     "artistes": "Leonardo DiCaprio",
     "annee": 1997
 })
@@ -172,7 +172,7 @@ db.films.find({
 
 ### 17. Films avec Leonardo DiCaprio ou de 1997
 ```javascript
-db.films.find({
+db.Film.find({
     $or: [
         {"artistes": "Leonardo DiCaprio"},
         {"annee": 1997}
