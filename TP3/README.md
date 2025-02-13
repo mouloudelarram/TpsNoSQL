@@ -1,4 +1,4 @@
-# Configuration CouchDb (simple tutorial) :
+# Configuration CouchDB (simple tutorial) :
 # Introduction
 This guide presents a simple tutorial for using CouchDB, a document-oriented database management system. 
 CouchDB is easy to install and use, and it is designed around a REST API that supports four main HTTP verbs: 
