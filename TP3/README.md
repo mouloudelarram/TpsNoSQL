@@ -1,4 +1,67 @@
 
+# Introduction
+This guide presents a simple tutorial for using CouchDB, a document-oriented database management system. 
+CouchDB is easy to install and use, and it is designed around a REST API that supports four main HTTP verbs: 
+GET, PUT, POST, and DELETE.
+
+# Setup
+
+## Docker Setup
+To run CouchDB locally using Docker, execute the following command:
+```bash
+docker run -d --name couchdb_demo -e COUCHDB_USER=Youssef -e COUCHDB_PASSWORD=meilleur -p 5984:5984 couchdb
+```
+
+Alternatively, you can set it up using a native installation. For more information on setting it up with Docker, refer to the official [CouchDB documentation](https://couchdb.apache.org/).
+
+## Access CouchDB Interface
+Once running, access the CouchDB interface by visiting:
+```url
+http://localhost:5984/_utils/
+```
+Use the credentials `Youssef` as the username and `meilleur` as the password.
+
+# Operations
+
+## REST API Basics
+CouchDB supports four essential HTTP methods:
+
+- **GET**: Retrieve a resource (e.g., get database, document).
+- **PUT**: Create or replace a resource (e.g., create a new database).
+- **POST**: Send data to a resource (e.g., send a document to the database).
+- **DELETE**: Remove a resource (e.g., delete a document or database).
+
+### Example: GET request
+To retrieve the current configuration or information, you can use:
+```bash
+curl -X GET http://localhost:5984/
+```
+
+### Example: PUT request
+To create a new database:
+```bash
+curl -X PUT http://localhost:5984/films
+```
+
+### Example: POST request
+To insert a new document (assuming we are adding a document to the `films` database):
+```bash
+curl -X POST http://localhost:5984/films -d '{"title": "Inception", "year": 2010}'
+```
+
+### Example: DELETE request
+To delete a database:
+```bash
+curl -X DELETE http://localhost:5984/films
+```
+
+## Advanced Usage
+For more advanced operations, such as inserting collections of documents or working with documents that do not have a defined schema, please refer to the official documentation.
+
+# Conclusion
+CouchDB is a flexible and easy-to-use document store, suitable for both small and large-scale applications. It offers great support for distributed systems and is ideal for scenarios where performance and scalability are crucial. Please explore the official documentation for more details.
+
+
 # Rapport sur l'implémentation de MapReduce pour le calcul de la norme de vecteurs et le produit matrice-vecteur avec CouchDB
 
 ## Introduction
