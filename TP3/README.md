@@ -1,7 +1,3 @@
-Rapport sur l'implémentation de MapReduce pour le calcul de la norme de vecteurs et le produit matrice-vecteur avec CouchDB
-Introduction
-Dans ce TP, nous allons explorer le concept de MapReduce dans un environnement centralisé, avec CouchDB, en appliquant ce concept sur une matrice de liens représentant des pages web. Ce type de calcul est similaire à ce que l'on trouve dans l'algorithme PageRank utilisé par des moteurs de recherche comme Google.
-
 Le but de ce rapport est de rendre le concept de MapReduce accessible à toute personne ne connaissant pas ce concept. Pour ce faire, nous allons décomposer chaque étape du processus en termes simples, expliquer les concepts clés et détailler l'implémentation nécessaire.
 
 Partie 1 : Présentation de CouchDB
